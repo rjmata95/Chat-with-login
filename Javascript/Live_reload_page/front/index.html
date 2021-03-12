@@ -8,6 +8,7 @@
     <title>Live_reload_page</title>
 </head>
 <body>
+    <script src="./src/index.js"></script>
     <main>
         <form class="sign-in">
             <label for="username" class="sign-in-element">
@@ -22,11 +23,12 @@
                 <span>comments</span>
                 <textarea maxlength="250" class="comment-box" name="comments" id="comment" placeholder="Type your comments" required></textarea>
             </label>
+            <button class="sign-in-element" id="submit-btn">submit 2</button>
             <input type="submit" class="sign-in-element" id="log-in" value="log-in">
         </form>
         <section class="display-section">
             <div class="display-info" id="display-username">
-
+                <p id="display-username"></p>
             </div>
             <div class="display-info comment-box" id="display-comment">
 
