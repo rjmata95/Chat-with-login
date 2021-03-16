@@ -1,20 +1,29 @@
-alert('hello world')
+$(() => {
+    var $main = $('main')
+    var $form = $('form')
+    var $displayUsername = $('#display-username')
+    var $displayComment = $('#display-comment')
+    var a = $( '<h1>', {
+        style: 'background-color:rgb(0,0,255)',
+        html: 'Prueba de jQuery'
+    })
 
-function load (){
-    var submitBtn = document.getElementById("submit-btn");
-    var usernameInput = document.getElementById('username')
-    var usernameDisplay = document.getElementById('display-username')
-    if(submitBtn){
-        submitBtn.addEventListener('click', ()=>{
-            console.log(usernameInput.value)
-         
-            // usernameDisplay.innerHTML = usernameInput.value
-        })
+    $main.append(a)
+    
+    $form.on('submit', (ev) => {
+        
+        ev.preventDefault()
+        
+        let username = $form.find('#username').val()
+        let comment = $form.find('#comment').val()
+        
+        $displayUsername.text(username)
+        $displayComment.text(comment)
 
-    }
-}
+    
+    })
+
+    
+})
 
 
-
-
-document.addEventListener("DOMContentLoaded", load, false);
