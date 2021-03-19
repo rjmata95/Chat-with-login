@@ -23,28 +23,32 @@ $(() => {
         let comment = $comment.val().trim()
         
         if (username === '') {
-            $username.attr('class','sign-in-element error')
+            $username.removeClass('success')
+            $username.addClass('error')
 
         } else if (!isEmail(username)) {
-            $username.attr('class','sign-in-element error')
-
+            $username.removeClass('success')
+            $username.addClass('error')
         } else {
-            $username.attr('class','sign-in-element success')
+            $username.removeClass('error')
+            $username.addClass('success')
             $displayUsername.text(username)
 
         }
 
         if (password === '') {
-            $password.attr('class','sign-in-element error')
-
+            $password.removeClass('success')
+            $password.addClass('error')
         } else {
-            $password.attr('class','sign-in-element success')
+            $password.removeClass('error')
+            $password.addClass('success')
         }
 
         if (comment === '') {
+            $comment.removeClass('success')
             $comment.addClass('error')
-
         } else {
+            $comment.removeClass('error')
             $comment.addClass('success')
             $displayComment.text(comment)
 
