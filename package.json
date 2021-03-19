@@ -11,7 +11,7 @@
         "dotenv": "^8.2.0"
     },
     "scripts": {
-        "start": "node ./front/server.js",
+        "start": "node server.js",
         "start_local": "node -r dotenv/config ./back/server.js",
         "serve-front": "node -r dotenv/config ./front/server.js"
     }
