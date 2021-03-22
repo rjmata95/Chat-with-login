@@ -5,7 +5,7 @@ var app = express();
 const port = process.env.PORT || 3000;
 
 
-app.use('/', express.static('front/src'))
+app.use('/', express.static('src'))
 
 
 // if (port == null || port == ""){
